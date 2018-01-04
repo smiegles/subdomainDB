@@ -40,6 +40,11 @@ __Response__
 
 ### POST /api/domain/:domain
 
+```
+domains: An array with all the domains to add.
+overwrite: if a domain already exists, update the created_at date. Default on `false`.
+```
+
 __Request__
 
 ```json
@@ -47,7 +52,8 @@ __Request__
   "domains" : [
     "admin.example.com",
     "test.example.com"
-  ]
+  ],
+  "overwrite" : true
 }
 ```
 
