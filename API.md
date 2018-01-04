@@ -40,10 +40,11 @@ __Response__
 
 ### POST /api/domain/:domain
 
-```
-domains: An array with all the domains to add.
-overwrite: if a domain already exists, update the created_at date. Default on `false`.
-```
+| Key | Value | Explanation | Default |
+| --- | --- | --- | --- |
+| domains | `Array` | An array with all the domains to add. ` | [] |
+| overwrite | `Boolean` | if a domain already exists, update the created_at date. | false |
+
 
 __Request__
 
