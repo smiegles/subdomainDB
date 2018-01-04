@@ -1,7 +1,8 @@
 # SubdomainDB
 
 DNSDB is a simple self-hosted API that allows you to maintain your own subdomain database.
-The API is still work in progress and is not functional yet.
+
+_The API is still work in progress and is not functional yet._
 
 # API Documentation
 
