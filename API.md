@@ -66,3 +66,14 @@ __Response__
   "success" : true
 }
 ```
+
+### DELETE /api/domain/:domain
+
+__Response__
+
+```json
+{
+  "message" : "Successfully deleted",
+  "success" : true
+}
+```
