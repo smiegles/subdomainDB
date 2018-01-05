@@ -100,11 +100,6 @@ rerun -- rackup --port 4000 config.ru
 
 ### POST /api/domain/:domain
 
-Key       | Value     | Explanation                                             | Default
---------- | --------- | ------------------------------------------------------- | -------
-domains   | `Array`   | An array with all the domains to add. `                 | []
-overwrite | `Boolean` | if a domain already exists, update the created_at date. | false
-
 **Request**
 
 ```json
