@@ -1,17 +1,12 @@
 # SubdomainDB
 
-DNSDB is a simple self-hosted API that allows you to maintain your own subdomain database.
+DNSDB is a simple self-hosted API that allows you to maintain your own subdomain database. Don't run this on an unauthenticated environment. For now there is no authentication implemented.
 
-
-### TODO
-- [ ] Add authentication.
-
-### Development
+### How to launch
 
 ```
 bundle install
-bundle exec rake db:seed
-
+bundle exec rake db:migrate
 rerun -- rackup --port 4000 config.ru
 ```
 
