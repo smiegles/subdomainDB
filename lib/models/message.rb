@@ -1,13 +1,13 @@
-class MessageModel
+class Message
   def self.error(message)
     response = {}
     response[:success] = false
     response[:message] = message
-    response.to_json
+    JSON.pretty_generate(response)
   end
 
   def self.success(response)
     response[:success] = true
-    response.to_json
+    JSON.pretty_generate(response)
   end
 end

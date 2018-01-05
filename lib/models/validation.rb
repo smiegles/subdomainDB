@@ -1,4 +1,4 @@
-class ValidationModel
+class Validation
 
   DOMAIN_REGEX = /\A([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?\z/.freeze
 

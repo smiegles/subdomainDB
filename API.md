@@ -1,64 +1,110 @@
 # API Documentation
 
-## GET /api/domain/search/le.co
+## GET /api/domain/
 
-__Response__
+**Response (found)**
 
 ```json
-[
-  {
-    "apple.com" : {
-      "created_at" : ".."
+{
+  "domains": [
+    {
+      "id": 1,
+      "name": "example.com"
     },
-    "admin.example.com" : {
-      "created_at" : ".."
-    },
-    "test.example.com" : {
-      "created_at" : ".."
+    {
+      "id": 2,
+      "name": "apple.com"
     }
-  }
-]
+  ],
+  "success": true
+}
+```
+
+## GET /api/domain/search/le.co
+
+**Response (found)**
+
+```json
+{
+  "domains": [
+    {
+      "id": 8,
+      "name": "nu.example.com",
+      "created_at": "2018-01-04 21:15:42 UTC"
+    },
+    {
+      "id": 12,
+      "name": "pro.apple.com",
+      "created_at": "2018-01-05 01:32:48 UTC"
+    }
+  ],
+  "debug": {
+    "offset": 0,
+    "limit": 10
+  },
+  "success": true
+}
+```
+
+**Response (not found)**
+
+```json
+{
+  "success": false,
+  "message": "No results"
+}
 ```
 
 ### GET /api/domain/:domain
 
-__Response__
+**Response (found)**
 
 ```json
-[
-  {
-    "admin.example.com" : {
-      "created_at" : ".."
+{
+  "domains": [
+    {
+      "id": 11,
+      "name": "admin.apple.com",
+      "created_at": "2018-01-05 01:32:48 UTC"
     },
-    "test.example.com" : {
-      "created_at" : ".."
+    {
+      "id": 12,
+      "name": "pro.apple.com",
+      "created_at": "2018-01-05 01:32:48 UTC"
     }
-  }
-]
+  ],
+  "success": true
+}
 ```
 
+**Response (not found)**
+
+```json
+{
+  "success": false,
+  "message": "domain not found"
+}
+```
 
 ### POST /api/domain/:domain
 
-| Key | Value | Explanation | Default |
-| --- | --- | --- | --- |
-| domains | `Array` | An array with all the domains to add. ` | [] |
-| overwrite | `Boolean` | if a domain already exists, update the created_at date. | false |
+Key       | Value     | Explanation                                             | Default
+--------- | --------- | ------------------------------------------------------- | -------
+domains   | `Array`   | An array with all the domains to add. `                 | []
+overwrite | `Boolean` | if a domain already exists, update the created_at date. | false
 
-
-__Request__
+**Request**
 
 ```json
 {
   "domains" : [
     "admin.example.com",
     "test.example.com"
-  ],
-  "overwrite" : true
+  ]
 }
 ```
 
-__Response__
+**Response**
 
 ```json
 {
@@ -69,7 +115,7 @@ __Response__
 
 ### DELETE /api/domain/:domain
 
-__Response__
+**Response**
 
 ```json
 {

@@ -1,7 +1,5 @@
-class Core
-
-  COMPONENTS = ['models','controllers']
-
+class Application
+  COMPONENTS = %w[models controllers].freeze
   def initialize
     COMPONENTS.each do |directory|
       Dir["./lib/#{directory}/*.rb"].each do |file|
