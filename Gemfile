@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 
 gem 'rake'
+gem 'rerun'
 gem 'sqlite3'
 gem 'sinatra'
 gem 'sinatra-contrib'

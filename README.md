@@ -1,6 +1,6 @@
 # SubdomainDB
 
-DNSDB is a simple self-hosted API that allows you to maintain your own subdomain database. Don't run this on an unauthenticated environment. For now there is no authentication implemented.
+SubdomainDB is a simple self-hosted API that allows you to maintain your own subdomain database. Don't run this on an unauthenticated environment. For now there is no authentication implemented.
 
 ### How to launch
 
