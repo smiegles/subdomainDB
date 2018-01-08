@@ -9,6 +9,11 @@ bundle install
 bundle exec rake db:migrate
 rerun -- rackup --port 4000 config.ru
 ```
+or with Docker:
+```
+docker build --rm -t subdomaindb .
+docker run -d -v subdomainDB:/subdomainDB -p 127.0.0.1:4000:4000 subdomaindb
+```
 
 # API Documentation
 
