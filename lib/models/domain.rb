@@ -3,10 +3,16 @@ class Domain < ActiveRecord::Base
   attr_accessor :domain, :query
   attr_reader :results
 
+  TABLE_ROWS = 'id, name, created_at'
+
   @results = []
 
+  def all
+    Domain.select(TABLE_ROWS).all
+  end
+
   def find
-    @results = Domain.find_by!(name: @domain).subdomains.select('id, name, created_at')
+    @results = Domain.find_by!(name: @domain).subdomains.select(TABLE_ROWS)
   rescue => e
     @results = []
   end

@@ -1,0 +1,14 @@
+@import 'components/base';
+@import 'base/base';
+
+
+html, body, .ng-scope {
+  font-family: 'Lato', sans-serif;
+  background: #F5F7FA;
+  margin: 0;
+  height: 100%;
+}
+
+app-root {
+  height: 100%;
+}

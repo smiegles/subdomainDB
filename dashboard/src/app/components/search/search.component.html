@@ -1,0 +1,20 @@
+<h1>Search</h1>
+
+<input (keyup.enter)="onKey($event)">
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Asset</th>
+      <th>Created at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let asset of assets">
+      <td>{{ asset.id }}</td>
+      <td>{{ asset.name }}</td>
+      <td>2018-01-05 02:08:13 UTC</td>
+    </tr>
+  </tbody>
+</table>

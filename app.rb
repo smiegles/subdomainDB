@@ -6,6 +6,7 @@ require 'sinatra/activerecord'
 require_relative './lib/app'
 
 set :database, {adapter: "sqlite3", database: "domains.sqlite3"}
-set :show_exceptions, false
+#set :show_exceptions, false
+set :public_folder, 'public'
 
 Application.new

@@ -1,0 +1,18 @@
+<h1>Assets</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Asset</th>
+      <th>Created at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let asset of assets" [routerLink]="['/asset', asset.name]">
+      <td>{{ asset.id }}</td>
+      <td>{{ asset.name }}</td>
+      <td>2018-01-05 02:08:13 UTC</td>
+    </tr>
+  </tbody>
+</table>

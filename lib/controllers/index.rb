@@ -1,6 +1,6 @@
 class App < Sinatra::Application
   before do
-    content_type :json
+    #content_type :json
     begin
       request.body.rewind
       @body = JSON.parse(request.body.read) if request.content_length.to_i > 0

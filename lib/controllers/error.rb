@@ -1,6 +1,8 @@
+require 'net/http'
+
 class App < Sinatra::Application
   not_found do
-    halt 400, Message.error("Method doesn't exist.")
+    File.read(File.join('public', 'index.html'))
   end
 
   error do

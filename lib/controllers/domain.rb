@@ -3,8 +3,14 @@ class App < Sinatra::Application
   register Sinatra::Namespace
 
   namespace '/api/domain' do
+
+    before do
+      content_type :json
+    end
+
     get '/' do
-      Message.success(domains: Domain.select('id, name').all.as_json)
+      domain = Domain.new
+      Message.success(domains: domain.all.as_json)
     end
 
     get '/:domain' do
@@ -24,9 +30,12 @@ class App < Sinatra::Application
       halt 200, Message.success(message: 'domain(s) inserted')
     end
 
-    delete '/:domain' do
+    delete '/:domain/all' do
       Domain.where(name: params[:domain]).destroy_all
       halt 200, Message.success(message: 'Successfully deleted')
+    end
+
+    delete '/:domain' do
     end
   end
 end

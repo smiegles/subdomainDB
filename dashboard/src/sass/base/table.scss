@@ -1,0 +1,27 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    text-transform: uppercase;
+  }
+
+  td, th {
+    text-align: left;
+    padding: 1em;
+  }
+
+  tr {
+    width: 100%;
+    border-bottom: 1px #e2e2e2 solid;
+  }
+
+  tbody {
+    tr {
+      &:hover {
+        background: #eee;
+        cursor: pointer;
+      }
+    }
+  }
+}

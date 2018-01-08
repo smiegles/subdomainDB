@@ -1,0 +1,63 @@
+.navigation {
+  width: 100%;
+  height: 100%;
+  background: #2C67C9;
+
+  ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      width: 100%;
+      float: left;
+      color: #fff;
+
+      i {
+        width: 100%;
+        float: left;
+        text-align: center;
+      }
+
+      p {
+        width: 100%;
+        margin: 0;
+        display: none;
+        float: left;
+        padding: 0.4em 0 0 0;
+        text-align: center;
+        font-weight: 700;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      &:hover {
+        background: #000;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .navigation {
+    max-width: 130px;
+
+    ul {
+      margin: 2em 0;
+
+      li {
+        padding: 1.4em 0;
+
+        i {
+          font-size: 40px;
+        }
+
+        p {
+          display: block;
+        }
+      }
+    }
+  }
+}

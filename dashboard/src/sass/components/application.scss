@@ -1,0 +1,21 @@
+.application {
+  overflow: scroll;
+  width: 100%;
+  padding: 1em;
+
+  h1 {
+    &::after {
+      display: block;
+      content: "";
+      width: 2rem;
+      padding-top: 0.6rem;
+      border-bottom: 3px #000 solid;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .application {
+    padding: 2em 3em;
+  }
+}
